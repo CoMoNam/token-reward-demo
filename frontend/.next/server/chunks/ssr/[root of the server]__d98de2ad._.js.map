@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 25, "column": 0}, "map": {"version":3,"sources":["file:///Users/tderk/dev_space/token-reward-system/frontend/src/lib/i18n.ts"],"sourcesContent":["\"use client\";\n\nimport i18n from \"i18next\";\nimport { initReactI18next } from \"react-i18next\";\n\nimport en from \"@/src/locales/en.json\";\nimport ko from \"@/src/locales/ko.json\";\n\ni18n.use(initReactI18next).init({\n  resources: {\n    en: { translation: en },\n    ko: { translation: ko },\n  },\n  lng: \"ko\",\n  fallbackLng: \"en\",\n  interpolation: {\n    escapeValue: false,\n  },\n});\n\nexport default i18n;\n"],"names":[],"mappings":";;;AAEA;AACA;AAAA;AAEA;AACA;AANA;;;;;AAQA,iJAAA,CAAA,UAAI,CAAC,GAAG,CAAC,kKAAA,CAAA,mBAAgB,EAAE,IAAI,CAAC;IAC9B,WAAW;QACT,IAAI;YAAE,aAAa,4FAAA,CAAA,UAAE;QAAC;QACtB,IAAI;YAAE,aAAa,4FAAA,CAAA,UAAE;QAAC;IACxB;IACA,KAAK;IACL,aAAa;IACb,eAAe;QACb,aAAa;IACf;AACF;uCAEe,iJAAA,CAAA,UAAI","debugId":null}}]
+}
