@@ -1,16 +1,17 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const initialSupply = 100000; // 10만 개
-  const rewardDistributor = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"; // Metamask에서 사용하는 보상자 주소 입력
+  const [deployer] = await ethers.getSigners();
 
-  const MyToken = await ethers.getContractFactory("MyToken");
-  const token = await MyToken.deploy(initialSupply, rewardDistributor);
+  console.log("📦 Deploying contracts with account:", deployer.address);
+
+  const initialSupply = ethers.parseUnits("1000", 18); // 10만 RTK
+  const Token = await ethers.getContractFactory("MyToken");
+  const token = await Token.deploy(initialSupply, deployer.address);
 
   await token.waitForDeployment();
 
-  console.log(`✅ MyToken deployed to: ${await token.getAddress()}`);
-  console.log(`✅ Tokens minted to: ${rewardDistributor}`);
+  console.log("🎯 RTK deployed to:", await token.getAddress());
 }
 
 main().catch((error) => {
