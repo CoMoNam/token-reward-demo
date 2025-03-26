@@ -1,1 +1,1 @@
-export const CONTRACT_ADDRESS = "0x7B040a79d7f9edDba0Cf77Ffa5935a096460a958"; // 배포된 RTK 컨트랙트 주소
+export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // 배포된 RTK 컨트랙트 주소
